@@ -1,4 +1,4 @@
-package ru.gostev.autotest;
+package ru.gostev.autotest.appmanager;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,14 +9,14 @@ public class ApplicationManager {
   WebDriver wd;
   private YandexMainPageHelper yandexMainPageHelper;
 
-  protected void init() {
+  public void init() {
     wd = new ChromeDriver();
     wd.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     wd.get("https://www.yandex.ru/");
     yandexMainPageHelper = new YandexMainPageHelper(wd);
   }
 
-  protected void stop() {
+  public void stop() {
     wd.quit();
   }
 

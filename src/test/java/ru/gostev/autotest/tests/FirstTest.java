@@ -1,4 +1,4 @@
-package ru.gostev.autotest;
+package ru.gostev.autotest.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

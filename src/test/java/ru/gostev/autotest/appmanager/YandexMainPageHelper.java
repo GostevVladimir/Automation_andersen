@@ -1,4 +1,4 @@
-package ru.gostev.autotest;
+package ru.gostev.autotest.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
