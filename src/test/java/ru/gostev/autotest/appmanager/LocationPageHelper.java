@@ -15,9 +15,9 @@ public class LocationPageHelper extends HelperBase{
 
   public void enteringAnotherCity(String city){
     type(stringInputCity,city);
-
     boolean clicked = false;
-    while (!clicked == true)
+
+    while (clicked != true)
       try{
         click(cityName);
         clicked = true;
