@@ -39,12 +39,13 @@ public class YandexMainPageHelper extends HelperBase{
     return words;
   }
 
-  public void equalsList(String[] before, String[] after) {
+  public boolean equalsList(String[] before, String[] after) {
     for (int i = 0; i < before.length; i++) {
-      if(! before[i].equals(after[i])){
-        System.out.println("Элементы не равны");
-      }else System.out.println("Элементы  равны");
+      if (! before[i].equals(after[i])){
+        return false;
+        }
     }
+    return true;
   }
 }
 
