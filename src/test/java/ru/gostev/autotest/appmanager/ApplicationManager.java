@@ -12,7 +12,7 @@ public class ApplicationManager {
 
   public void init() {
     wd = new ChromeDriver();
-    wd.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     yandexMainPageHelper = new YandexMainPageHelper(wd);
     yandexMainPageHelper.openSearchPage();
     weatherPageHelper = new WeatherPageHelper(wd);
