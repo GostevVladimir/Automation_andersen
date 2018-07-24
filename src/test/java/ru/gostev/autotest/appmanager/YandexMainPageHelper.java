@@ -3,6 +3,7 @@ package ru.gostev.autotest.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 public class YandexMainPageHelper extends HelperBase{
 
@@ -23,7 +24,7 @@ public class YandexMainPageHelper extends HelperBase{
     click(searchButton);
   }
 
-  public void goToLacationpage(){
+  public void goToLacationPage(){
     click(locationButton);
   }
 
@@ -39,13 +40,10 @@ public class YandexMainPageHelper extends HelperBase{
     return words;
   }
 
-  public boolean equalsList(String[] before, String[] after) {
-    for (int i = 0; i < before.length; i++) {
-      if (! before[i].equals(after[i])){
-        return false;
-        }
+  public void assertEqualsList(String[] before, String[] after) {
+    for (int i = 0; i < before.length; i++){
+      Assert.assertEquals(before[i], after[i]);
     }
-    return true;
   }
 }
 

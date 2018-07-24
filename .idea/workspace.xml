@@ -25,7 +25,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="330">
               <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="18" />
               <folding />
             </state>
@@ -35,11 +35,9 @@
       <file leaf-file-name="LocationPageHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/gostev/autotest/appmanager/LocationPageHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="198">
               <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding>
-                <marker date="1532357046055" expanded="true" signature="695:698" ph="{...}" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -71,16 +69,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
               <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-              <folding>
-                <marker date="1532357046055" expanded="false" signature="711:718" ph=" { " />
-                <marker date="1532357046055" expanded="false" signature="728:732" ph=" }" />
-                <marker date="1532357046055" expanded="false" signature="789:796" ph=" { " />
-                <marker date="1532357046055" expanded="false" signature="824:828" ph=" }" />
-                <marker date="1532357046055" expanded="false" signature="879:886" ph=" { " />
-                <marker date="1532357046055" expanded="false" signature="911:915" ph=" }" />
-                <marker date="1532357046055" expanded="false" signature="967:974" ph=" { " />
-                <marker date="1532357046055" expanded="false" signature="1000:1004" ph=" }" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,8 +77,8 @@
       <file leaf-file-name="YandexMainPageHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/gostev/autotest/appmanager/YandexMainPageHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="47" column="3" lean-forward="true" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
+            <state relative-caret-position="220">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -98,11 +87,9 @@
       <file leaf-file-name="LocationTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/gostev/autotest/tests/LocationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="374">
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,8 +137,8 @@
         <option value="$PROJECT_DIR$/src/test/java/ru/gostev/autotest/appmanager/ApplicationManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/gostev/autotest/appmanager/HelperBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/gostev/autotest/appmanager/LocationPageHelper.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ru/gostev/autotest/appmanager/YandexMainPageHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/gostev/autotest/tests/LocationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/gostev/autotest/appmanager/YandexMainPageHelper.java" />
       </list>
     </option>
   </component>
@@ -183,6 +170,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -238,10 +229,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -435,21 +422,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LocationTest - 2018.07.23 at 17h 53m 17s.xml">
-      <configuration name="LocationTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="LocationTest - 2018.07.23 at 17h 54m 35s.xml">
-      <configuration name="LocationTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="LocationTest - 2018.07.23 at 17h 56m 05s.xml">
-      <configuration name="LocationTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="LocationTest - 2018.07.23 at 18h 03m 08s.xml">
-      <configuration name="LocationTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="LocationTest - 2018.07.23 at 18h 04m 31s.xml">
-      <configuration name="LocationTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="LocationTest - 2018.07.23 at 18h 05m 53s.xml">
       <configuration name="LocationTest" configurationId="TestNG" />
     </history-entry>
@@ -465,31 +437,45 @@
     <history-entry file="LocationTest - 2018.07.23 at 18h 10m 13s.xml">
       <configuration name="LocationTest" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="LocationTest - 2018.07.24 at 09h 10m 04s.xml">
+      <configuration name="LocationTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="LocationTest - 2018.07.24 at 09h 13m 26s.xml">
+      <configuration name="LocationTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="LocationTest - 2018.07.24 at 09h 16m 23s.xml">
+      <configuration name="LocationTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="LocationTest - 2018.07.24 at 09h 24m 10s.xml">
+      <configuration name="LocationTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="LocationTest - 2018.07.24 at 09h 34m 44s.xml">
+      <configuration name="LocationTest" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32838982" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32838982" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16666667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1684435" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3993644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -511,12 +497,6 @@
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ru/gostev/autotest/appmanager/YandexMainPageHelper.java</url>
-          <line>43</line>
-          <properties />
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="19" />
     </breakpoint-manager>
@@ -531,9 +511,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -541,9 +519,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
           <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding>
-            <marker date="1532357046055" expanded="true" signature="695:698" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -592,9 +568,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <marker date="1532357046055" expanded="true" signature="695:698" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -610,9 +584,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="17" column="56" lean-forward="false" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -620,16 +592,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-          <folding>
-            <marker date="1532357046055" expanded="false" signature="711:718" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="728:732" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="789:796" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="824:828" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="879:886" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="911:915" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="967:974" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="1000:1004" ph=" }" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -652,16 +615,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-          <folding>
-            <marker date="1532357046055" expanded="false" signature="711:718" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="728:732" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="789:796" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="824:828" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="879:886" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="911:915" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="967:974" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="1000:1004" ph=" }" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -710,16 +664,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="14" column="56" lean-forward="true" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-          <folding>
-            <marker date="1532357046055" expanded="false" signature="711:718" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="728:732" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="789:796" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="824:828" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="879:886" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="911:915" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="967:974" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="1000:1004" ph=" }" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -794,16 +739,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-          <folding>
-            <marker date="1532357046055" expanded="false" signature="711:718" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="728:732" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="789:796" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="824:828" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="879:886" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="911:915" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="967:974" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="1000:1004" ph=" }" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -834,16 +770,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-          <folding>
-            <marker date="1532357046055" expanded="false" signature="711:718" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="728:732" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="789:796" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="824:828" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="879:886" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="911:915" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="967:974" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="1000:1004" ph=" }" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -875,16 +802,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding>
-            <marker date="1532357046055" expanded="false" signature="711:718" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="728:732" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="789:796" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="824:828" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="879:886" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="911:915" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="967:974" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="1000:1004" ph=" }" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -911,11 +829,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/gostev/autotest/appmanager/LocationPageHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
+        <state relative-caret-position="198">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <marker date="1532357046055" expanded="true" signature="695:698" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -933,16 +849,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-          <folding>
-            <marker date="1532357046055" expanded="false" signature="711:718" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="728:732" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="789:796" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="824:828" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="879:886" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="911:915" ph=" }" />
-            <marker date="1532357046055" expanded="false" signature="967:974" ph=" { " />
-            <marker date="1532357046055" expanded="false" signature="1000:1004" ph=" }" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -956,7 +863,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="330">
           <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="18" />
           <folding />
         </state>
@@ -970,6 +877,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/internal/Invoker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="453" column="0" lean-forward="false" selection-start-line="453" selection-start-column="0" selection-end-line="453" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/gostev/autotest/tests/FirstTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -978,39 +899,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/internal/Invoker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="453" column="0" lean-forward="false" selection-start-line="453" selection-start-column="0" selection-end-line="453" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="e#829#830#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/gostev/autotest/appmanager/YandexMainPageHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="47" column="3" lean-forward="true" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
+        <state relative-caret-position="220">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/gostev/autotest/tests/LocationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>

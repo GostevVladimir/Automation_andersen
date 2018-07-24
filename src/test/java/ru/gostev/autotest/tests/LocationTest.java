@@ -1,22 +1,19 @@
 package ru.gostev.autotest.tests;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.Arrays;
 
 
 public class LocationTest extends TestBase {
 
   @Test
   public void locationTest() {
-    app.getYandexMainPageHelper().goToLacationpage();
+    app.getYandexMainPageHelper().goToLacationPage();
     app.getLocationPageHelper().enteringAnotherCity("Милан");
     String[] before = app.getYandexMainPageHelper().getListElementYet();
-    app.getYandexMainPageHelper().goToLacationpage();
+    app.getYandexMainPageHelper().goToLacationPage();
     app.getLocationPageHelper().enteringAnotherCity("Москва");
     String[] after = app.getYandexMainPageHelper().getListElementYet();
-    Assert.assertTrue(app.getYandexMainPageHelper().equalsList(before, after));
+    app.getYandexMainPageHelper().assertEqualsList(before, after);
   }
 }
 
