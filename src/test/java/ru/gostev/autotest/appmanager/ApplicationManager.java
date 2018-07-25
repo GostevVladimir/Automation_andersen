@@ -9,11 +9,13 @@ public class ApplicationManager {
   private YandexMainPageHelper yandexMainPageHelper;
   private WeatherPageHelper weatherPageHelper;
   private LocationPageHelper locationPageHelper;
+  private MarketPageHelper marketPageHelper;
 
   public void init() {
     wd = new ChromeDriver();
     wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     yandexMainPageHelper = new YandexMainPageHelper(wd);
+    marketPageHelper = new MarketPageHelper(wd);
     yandexMainPageHelper.openSearchPage();
     weatherPageHelper = new WeatherPageHelper(wd);
     locationPageHelper = new LocationPageHelper(wd);
@@ -32,5 +34,8 @@ public class ApplicationManager {
   }
   public LocationPageHelper getLocationPageHelper() {
     return locationPageHelper;
+  }
+  public MarketPageHelper getMarketPageHelper() {
+    return marketPageHelper;
   }
 }
