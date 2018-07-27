@@ -23,13 +23,13 @@ public class MarketTests extends TestBase{
   }
 
   @Test(enabled = true)
-  public void navigationTest(){
-    app.getNavigationPageHelper().goToMainPage();
-    app.getNavigationPageHelper().goToVideoPage("Видео");
-    Assert.assertTrue(app.getNavigationPageHelper().CheckingNavigators("https://yandex.ru/video/"));
-    app.getNavigationPageHelper().goToMainPage();
-    app.getNavigationPageHelper().goToMapsPage("Карты");
-    Assert.assertTrue(app.getNavigationPageHelper().CheckingNavigators("https://yandex.ru/maps/"));
-    app.getNavigationPageHelper().goToMainPage();
+  public void compareGoodsTest(){
+    app.getMarketPageHelper().openMarketPage();
+    app.getMarketPageHelper().moveToCategory();
+    app.getMarketPageHelper().addGoodsToCompare();
+    app.getMarketPageHelper().goToComparePage("Сравнение");
+    Assert.assertTrue(app.getMarketPageHelper().chekingGoodsCompare(2));
+    app.getMarketPageHelper().deleteGoodsIncompare("Удалить список");
+    Assert.assertTrue((app.getMarketPageHelper().chekingDeleteGoodsInCompare("Товаров нет.")));
   }
 }

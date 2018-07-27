@@ -7,7 +7,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import java.util.ArrayList;
@@ -23,7 +22,7 @@ public class MarketPageHelper extends HelperBase{
 
   private final String URL = "https://market.yandex.ru/";
 
-  private Select select;
+/*  private Select select;*/
 
   @FindBy(css = "[data-department=\"Компьютеры\"]")
   protected WebElement categoryPC;
@@ -34,9 +33,17 @@ public class MarketPageHelper extends HelperBase{
   @FindBy(css = "button[role=\"listbox\"]")
   protected WebElement showBy;
 
+  @FindBy(css = ".title title_size_18")
+  protected WebElement textDelitioncompare;
+
   private By listShow = By.cssSelector(".select__text");
   private By listSort = By.cssSelector(".n-filter-sorter");
   private By price = By.cssSelector("div[class=\"price\"]");
+  private By compareButtonsElements = By.cssSelector(".n-user-lists_type_compare");
+  private By marketMenuElements = By.cssSelector(".header2-menu__text");
+  private By compareGoodsElements = By.cssSelector(".price");
+  private By compareMenuElements = By.cssSelector(".link__inner");
+
 
 
 
@@ -64,10 +71,10 @@ public class MarketPageHelper extends HelperBase{
     getElementList(text,listShow).click();
   }
 
-  public Select getSelect(WebElement element) {
+/*  public Select getSelect(WebElement element) {
     select = new Select(element);
     return select;
-  }
+  }*/
 
   public  WebElement getElementList(String nameElementList, By element){
 
@@ -136,4 +143,49 @@ public class MarketPageHelper extends HelperBase{
     }
     return true;
   }*/
+
+  public void addGoodsToCompare() {
+    Actions action = new Actions(wd);
+    List<WebElement> elementsCompari = getWebElements(compareButtonsElements);
+    for(int i =0; i < 2; i++){
+      action.moveToElement(elementsCompari.get(i)).perform();
+      elementsCompari.get(i).click();
+    }
+  }
+
+  public  void goToComparePage(String textMenu){
+    List<WebElement> elementsMenuMarket = getWebElements(marketMenuElements);
+    Actions action = new Actions(wd);
+    for(int i = 0; i < elementsMenuMarket.size(); i++){
+      if(elementsMenuMarket.get(i).getText().equals(textMenu)){
+        action.moveToElement(elementsMenuMarket.get(i)).perform();
+        elementsMenuMarket.get(i).click();
+        break;
+      }
+    }
+  }
+
+  public boolean chekingGoodsCompare(int count) {
+    List<WebElement> elementsGoodsCompare = getWebElements(compareGoodsElements);
+    if (elementsGoodsCompare.size() == count){
+      return true;
+    }
+      return false;
+  }
+
+  public void deleteGoodsIncompare(String textMenu) {
+    List<WebElement> elementsMenuCompare = getWebElements(compareMenuElements);
+    for (int i = 0; i < elementsMenuCompare.size(); i++) {
+      if (elementsMenuCompare.get(i).getText().equals(textMenu)) {
+        elementsMenuCompare.get(i).click();
+        break;
+      }
+    }
+  }
+
+  public boolean chekingDeleteGoodsInCompare(String text){
+    if(text.contains(textDelitioncompare.getText())){
+      return true;
+    }else  return false;
+  }
 }
