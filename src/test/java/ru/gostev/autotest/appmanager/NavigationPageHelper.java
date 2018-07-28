@@ -22,17 +22,28 @@ public class NavigationPageHelper extends HelperBase{
   private final String URL = "https://www.yandex.ru/";
 
   private By navigation = By.cssSelector("[role=\"navigation\" ] .home-link");
+  public By textFromMarketPage = By.cssSelector("._2VRdkOjM3w");
 
   @FindBy(css = ".related-serp__title")
   public WebElement textFromVideoPage;
 
+  @FindBy(css = "a[href=\"/collections/user/\"]")
+  public WebElement textFromPicturePage;
+
+  @FindBy(css = "a[href=\"/politics.html?from=index\"]")
+  public WebElement textFromNewsPage;
+
   @FindBy(css = ".input_air-search-large__control")
   public WebElement textFromMapsPage;
 
+  @FindBy(css = "[data-department='Компьютеры']")
+  public WebElement elementYandexMarket;
 
-/*  public By textFromVideoPage = By.cssSelector(".related-serp__title");
-  public By textFromMapsPage = By.cssSelector(".input_air-search-large__control");*/
+  @FindBy(css = "a[class=\"name\"]")
+  public WebElement textFromInterpreterPage;
 
+  @FindBy(css = "div[data-b=\"60\"]")
+  public WebElement textFromMusicPage;
 
 
   public WebElement returnElementFromList(List<WebElement> listElement, String textElement){
@@ -79,20 +90,29 @@ public class NavigationPageHelper extends HelperBase{
       return true;
   }
 
-/*  public boolean chekingTextFromPage(String textFromPage, int timeout, By elementLocator) {
-    final WebDriverWait wait = new WebDriverWait(wd, timeout);
-    wait.until(ExpectedConditions.visibilityOf(returnElementFromList(getWebElements(elementLocator), textFromPage)));
-    if (textFromPage.equals(returnElementFromList(getWebElements(elementLocator), textFromPage).getText())) {
-      return true;
-    } else return false;
-  }*/
-
   public boolean chekingTextFromPage( String text, WebElement element, int timeout){
     final WebDriverWait wait = new WebDriverWait(wd, timeout);
     wait.until(ExpectedConditions.visibilityOf(element));
+    System.out.println(element.getText());
     if (text.contains(element.getText())){
       return true;
     }else return false;
   }
 
+  public boolean chekingTextFromMarketPage(String text){
+    String str = getElementList("Популярные товары",
+            getWebElements(textFromMarketPage)).getText();
+    System.out.println(str);
+    if (!text.contains(str)){
+      return false;
+    } else return true;
+  }
+
+  public boolean waitLink(String text, WebElement element, int timeout) {
+    final WebDriverWait wait = new WebDriverWait(wd, timeout);
+    wait.until(ExpectedConditions.visibilityOf(element));
+    if (text.contains(element.getText())) {
+      return true;
+    } else return false;
+  }
 }

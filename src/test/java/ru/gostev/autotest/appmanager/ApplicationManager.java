@@ -9,8 +9,11 @@ public class ApplicationManager {
   private YandexMainPageHelper yandexMainPageHelper;
   private WeatherPageHelper weatherPageHelper;
   private LocationPageHelper locationPageHelper;
-  private MarketPageHelper marketPageHelper;
   private NavigationPageHelper navigationPageHelper;
+  private MarketPageHelper marketPageHelper;
+  private LoptopPageHalper loptopPageHalper;
+  private CompareGoodsPageHelper compareGoodsPageHelper;
+
 
   public void init() {
     wd = new ChromeDriver();
@@ -22,6 +25,8 @@ public class ApplicationManager {
     yandexMainPageHelper.openSearchPage();
     weatherPageHelper = new WeatherPageHelper(wd);
     locationPageHelper = new LocationPageHelper(wd);
+    loptopPageHalper = new LoptopPageHalper(wd);
+    compareGoodsPageHelper = new CompareGoodsPageHelper(wd);
   }
 
   public void stop() {
@@ -43,5 +48,11 @@ public class ApplicationManager {
   }
   public NavigationPageHelper getNavigationPageHelper() {
     return navigationPageHelper;
+  }
+  public LoptopPageHalper getLoptopPageHalper() {
+    return loptopPageHalper;
+  }
+  public CompareGoodsPageHelper getCompareGoodsPageHelper() {
+    return compareGoodsPageHelper;
   }
 }
