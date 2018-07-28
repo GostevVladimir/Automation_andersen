@@ -8,7 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.util.List;
 
 
@@ -23,6 +22,10 @@ public class NavigationPageHelper extends HelperBase{
 
   private By navigation = By.cssSelector("[role=\"navigation\" ] .home-link");
   public By textFromMarketPage = By.cssSelector("._2VRdkOjM3w");
+
+/*  @FindBy(css = "[role=\"navigation\" ] .home-link")
+  public WebElement navigation;*/
+
 
   @FindBy(css = ".related-serp__title")
   public WebElement textFromVideoPage;
@@ -45,38 +48,12 @@ public class NavigationPageHelper extends HelperBase{
   @FindBy(css = "div[data-b=\"60\"]")
   public WebElement textFromMusicPage;
 
-
-  public WebElement returnElementFromList(List<WebElement> listElement, String textElement){
-    for(int i = 0; i < listElement.size(); i++){
-      if(listElement.get(i).getText().equals(textElement)){
-        return listElement.get(i);
-      }
-    }
-    return null;
-  }
   public void goToMainPage(){
     wd.get(URL);
   }
-  public void goToVideoPage(String namePage){
-    returnElementFromList(getWebElements(navigation), namePage).click();
-  }
-  public void goToPicturePage(String namePage){
-    returnElementFromList(getWebElements(navigation), namePage).click();
-  }
-  public void goToNewsPage(String namePage){
-    returnElementFromList(getWebElements(navigation), namePage).click();
-  }
-  public void goToMapsPage(String namePage){
-    returnElementFromList(getWebElements(navigation), namePage).click();
-  }
-  public void goToMarketPage(String namePage){
-    returnElementFromList(getWebElements(navigation), namePage).click();
-  }
-  public void goToInterpreterPage(String namePage){
-    returnElementFromList(getWebElements(navigation), namePage).click();
-  }
-  public void goToMusicPage(String namePage){
-    returnElementFromList(getWebElements(navigation), namePage).click();
+
+  public void selectNavigation(String nameElementList) {
+    getElementList(nameElementList, getWebElements(navigation)).click();
   }
 
   public String getURL(){
@@ -84,35 +61,18 @@ public class NavigationPageHelper extends HelperBase{
   }
 
   public boolean checkingNavigators(String URL){
-    if(! URL.contains(getURL())){
+    if(! getURL().contains(URL)){
       return false;
     }else
       return true;
   }
 
-  public boolean chekingTextFromPage( String text, WebElement element, int timeout){
+  public boolean chekingTextFromPage(String text, WebElement element, int timeout){
     final WebDriverWait wait = new WebDriverWait(wd, timeout);
     wait.until(ExpectedConditions.visibilityOf(element));
-    System.out.println(element.getText());
-    if (text.contains(element.getText())){
+    String str = element.getText();
+    if (text.contains(str)){
       return true;
     }else return false;
-  }
-
-  public boolean chekingTextFromMarketPage(String text){
-    String str = getElementList("Популярные товары",
-            getWebElements(textFromMarketPage)).getText();
-    System.out.println(str);
-    if (!text.contains(str)){
-      return false;
-    } else return true;
-  }
-
-  public boolean waitLink(String text, WebElement element, int timeout) {
-    final WebDriverWait wait = new WebDriverWait(wd, timeout);
-    wait.until(ExpectedConditions.visibilityOf(element));
-    if (text.contains(element.getText())) {
-      return true;
-    } else return false;
   }
 }

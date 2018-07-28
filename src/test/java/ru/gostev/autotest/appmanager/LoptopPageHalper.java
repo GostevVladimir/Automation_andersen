@@ -6,10 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +26,7 @@ public class LoptopPageHalper extends HelperBase{
   private By filterLocator = By.cssSelector(".link.link_theme_major");
   private By compareButtonsElements = By.cssSelector(".n-user-lists_type_compare");
   private By marketMenuElements = By.cssSelector(".header2-menu__text");
+  private By goodsElements = By.cssSelector(".n-snippet-card2__title");
 
   public void selectShowBy(String text){
     moveTo(showBy);
@@ -38,7 +36,7 @@ public class LoptopPageHalper extends HelperBase{
   }
   public  void equalsList(int size){
     wd.navigate().refresh();
-    List<WebElement> elements = wd.findElements(By.cssSelector(".n-snippet-card2__title"));
+    List<WebElement> elements = wd.findElements(goodsElements);
     Assert.assertEquals(elements.size(), size);
   }
 
@@ -103,5 +101,4 @@ public class LoptopPageHalper extends HelperBase{
       }
     }
   }
-
 }

@@ -36,7 +36,6 @@ public class ApplicationManager {
   public YandexMainPageHelper getYandexMainPageHelper() {
     return yandexMainPageHelper;
   }
-
   public WeatherPageHelper getWeatherPageHelper() {
     return weatherPageHelper;
   }
