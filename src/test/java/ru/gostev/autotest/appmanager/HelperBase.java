@@ -3,6 +3,7 @@ package ru.gostev.autotest.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 
@@ -32,5 +33,10 @@ public class HelperBase {
   public List<WebElement> getWebElements(By element){
     List<WebElement> elements = wd.findElements(element);
     return elements;
+  }
+
+  public void moveTo(WebElement element) {
+    Actions action = new Actions(wd);
+    action.moveToElement(element).perform();
   }
 }

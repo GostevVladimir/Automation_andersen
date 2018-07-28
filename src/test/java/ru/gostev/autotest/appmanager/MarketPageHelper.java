@@ -22,7 +22,6 @@ public class MarketPageHelper extends HelperBase{
 
   private final String URL = "https://market.yandex.ru/";
 
-/*  private Select select;*/
 
   @FindBy(css = "[data-department=\"Компьютеры\"]")
   protected WebElement categoryPC;
@@ -33,8 +32,13 @@ public class MarketPageHelper extends HelperBase{
   @FindBy(css = "button[role=\"listbox\"]")
   protected WebElement showBy;
 
-  @FindBy(css = ".title title_size_18")
-  protected WebElement textDelitioncompare;
+  @FindBy(css = "div[class=\"title title_size_18\"]")
+  protected WebElement textDelitionCompare;
+
+  @FindBy(css = ".link_hovered_yes")
+  protected WebElement activeFilter;
+
+
 
   private By listShow = By.cssSelector(".select__text");
   private By listSort = By.cssSelector(".n-filter-sorter");
@@ -43,8 +47,7 @@ public class MarketPageHelper extends HelperBase{
   private By marketMenuElements = By.cssSelector(".header2-menu__text");
   private By compareGoodsElements = By.cssSelector(".price");
   private By compareMenuElements = By.cssSelector(".link__inner");
-
-
+  private By filterLocator = By.cssSelector(".link.link_theme_major");
 
 
   public void openMarketPage(){
@@ -64,21 +67,26 @@ public class MarketPageHelper extends HelperBase{
     locator.click();
   }
 
-  public void moveToShowBy(String text){
-    Actions action = new Actions(wd);
-    action.moveToElement(showBy).perform();
-    clickToLink(showBy,wd, 10);
-    getElementList(text,listShow).click();
+  public void selectShowBy(String text){
+    moveTo(showBy);
+    clickToLink(showBy,wd, 5);
+    //getWebElements(listShow);
+    getElementList(text,getWebElements(listShow)).click();
   }
 
-/*  public Select getSelect(WebElement element) {
-    select = new Select(element);
-    return select;
-  }*/
 
-  public  WebElement getElementList(String nameElementList, By element){
+/*  public  WebElement getElementList(String nameElementList, By element){
 
     List<WebElement> elements = wd.findElements(element);
+    for(int i = 0; i < elements.size(); i++){
+      if(nameElementList.equals(elements.get(i).getText())){
+        return elements.get(i);
+      }
+    }
+    return null;
+  }*/
+
+  public  WebElement getElementList(String nameElementList, List<WebElement> elements){
     for(int i = 0; i < elements.size(); i++){
       if(nameElementList.equals(elements.get(i).getText())){
         return elements.get(i);
@@ -94,35 +102,40 @@ public class MarketPageHelper extends HelperBase{
 
   }
 
-/*  public List<WebElement> getWebElements(By element){
-    List<WebElement> elements = wd.findElements(element);
-    return elements;
-  }*/
 
-  public List<String> print(List<WebElement> list){
+  public List<String> getACorrectPriceList(List<WebElement> list){
     List<String> listString = new ArrayList<String>();
     for(int i =0; i < list.size(); i++){
       String str = list.get(i).getText();
-      System.out.println(replaceSymbol(str));
       listString.add(replaceSymbol(str));
     }
     return listString;
   }
 
   public boolean parseToListInteger(List<String> listString){
-      for(int i = 0; i < listString.size()-1; i++){
-        if(!(Integer.parseInt(listString.get(i)) <= Integer.parseInt(listString.get(i+1)))){
-          return false;
-        }
+    for(int i = 0; i < listString.size()-1; i++){
+      if(!(Integer.parseInt(listString.get(i)) <= Integer.parseInt(listString.get(i+1)))){
+        return false;
       }
+    }
     return true;
   }
 
-  public void moveToSortPrice(String text){
-    getElementList(text, listSort).click();
-    wd.navigate().refresh();
-    //comparePrice(parseToListInteger(print(getWebElements(price))));
+  public void clickToSortPrice(String text){
+    getElementList(text, getWebElements(listSort)).click();
   }
+
+  public boolean checkingTheSortIcon(String nameClass){
+    List<WebElement> elementSort = getWebElements(filterLocator);
+    moveTo(getElementList("по цене", elementSort));
+    String str = getElementList("по цене", elementSort).getAttribute("class");
+    if(! str.contains(nameClass)){
+      return false;
+    }else
+    return true;
+  }
+
+
 
   public String replaceSymbol(String str){
       str = str.replaceAll("\\s+","");
@@ -132,17 +145,10 @@ public class MarketPageHelper extends HelperBase{
   }
 
   public boolean comparePriceGoods(){
-    return parseToListInteger(print(getWebElements(price)));
+    wd.navigate().refresh();
+    return parseToListInteger(getACorrectPriceList(getWebElements(price)));
   }
 
-/*  public boolean comparePrice(List<Integer> listInteger){
-    for(int i = 0; i < listInteger.size(); i++){
-      if(!(i < i+1)){
-        return false;
-      }
-    }
-    return true;
-  }*/
 
   public void addGoodsToCompare() {
     Actions action = new Actions(wd);
@@ -184,7 +190,7 @@ public class MarketPageHelper extends HelperBase{
   }
 
   public boolean chekingDeleteGoodsInCompare(String text){
-    if(text.contains(textDelitioncompare.getText())){
+    if(text.contains(textDelitionCompare.getText())){
       return true;
     }else  return false;
   }

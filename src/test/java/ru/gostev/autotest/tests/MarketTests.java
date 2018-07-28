@@ -4,22 +4,23 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class MarketTests extends TestBase{
-  @Test(enabled = false)
+  @Test(enabled = true)
   public void equalsListMarket(){
     app.getMarketPageHelper().openMarketPage();
     app.getMarketPageHelper().moveToCategory();
-    app.getMarketPageHelper().moveToShowBy("Показывать по 12");
+    app.getMarketPageHelper().selectShowBy("Показывать по 12");
     app.getMarketPageHelper().equalsList(12);
-    app.getMarketPageHelper().moveToShowBy("Показывать по 48");
+    app.getMarketPageHelper().selectShowBy("Показывать по 48");
     app.getMarketPageHelper().equalsList(48);
   }
 
-  @Test(enabled = false)
+  @Test(enabled = true)
   public void productSortingByPrice(){
     app.getMarketPageHelper().openMarketPage();
     app.getMarketPageHelper().moveToCategory();
-    app.getMarketPageHelper().moveToSortPrice("по цене");
+    app.getMarketPageHelper().clickToSortPrice("по цене");
     Assert.assertTrue(app.getMarketPageHelper().comparePriceGoods());
+    Assert.assertTrue(app.getMarketPageHelper().checkingTheSortIcon("link_hovered_yes"));
   }
 
   @Test(enabled = true)
