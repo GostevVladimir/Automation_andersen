@@ -21,11 +21,6 @@ public class NavigationPageHelper extends HelperBase{
   private final String URL = "https://www.yandex.ru/";
 
   private By navigation = By.cssSelector("[role=\"navigation\" ] .home-link");
-  public By textFromMarketPage = By.cssSelector("._2VRdkOjM3w");
-
-/*  @FindBy(css = "[role=\"navigation\" ] .home-link")
-  public WebElement navigation;*/
-
 
   @FindBy(css = ".related-serp__title")
   public WebElement textFromVideoPage;
@@ -40,7 +35,7 @@ public class NavigationPageHelper extends HelperBase{
   public WebElement textFromMapsPage;
 
   @FindBy(css = "[data-department='Компьютеры']")
-  public WebElement elementYandexMarket;
+  public WebElement textFromMarketPage;
 
   @FindBy(css = "a[class=\"name\"]")
   public WebElement textFromInterpreterPage;

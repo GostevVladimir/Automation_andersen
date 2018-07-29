@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 
 public class CompareGoodsPageHelper extends HelperBase{
@@ -39,7 +40,7 @@ public class CompareGoodsPageHelper extends HelperBase{
     }
   }
   public boolean chekingDeleteGoodsInCompare(String text){
-    if(text.contains(textDelitionCompare.getText())){
+    if(textDelitionCompare.getText().contains(text)){
       return true;
     }else  return false;
   }

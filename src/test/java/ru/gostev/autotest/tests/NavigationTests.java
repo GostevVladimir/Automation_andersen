@@ -34,7 +34,7 @@ public class NavigationTests extends TestBase{
     app.getNavigationPageHelper().goToMainPage();
     app.getNavigationPageHelper().selectNavigation("Маркет");
     Assert.assertTrue(app.getNavigationPageHelper().chekingTextFromPage("Компьютеры",
-            app.getNavigationPageHelper().elementYandexMarket, 5));
+            app.getNavigationPageHelper().textFromMarketPage, 5));
     Assert.assertTrue(app.getNavigationPageHelper().checkingNavigators("https://market.yandex.ru"));
 
     app.getNavigationPageHelper().goToMainPage();

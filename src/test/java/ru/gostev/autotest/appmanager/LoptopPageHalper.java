@@ -31,7 +31,6 @@ public class LoptopPageHalper extends HelperBase{
   public void selectShowBy(String text){
     moveTo(showBy);
     clickToLink(showBy,wd, 5);
-    //getWebElements(listShow);
     getElementList(text,getWebElements(listShow)).click();
   }
   public  void equalsList(int size){
