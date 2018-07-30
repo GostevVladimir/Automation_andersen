@@ -4,8 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class MarketTests extends TestBase{
-  @Test(enabled = true)
-  public void equalsListMarket(){
+  @Test(enabled = false)
+  public void testEqualsListMarket(){
     app.getMarketPageHelper().openMarketPage();
     app.getMarketPageHelper().moveToCategory();
     app.getLoptopPageHalper().selectShowBy("Показывать по 12");
@@ -14,8 +14,8 @@ public class MarketTests extends TestBase{
     app.getLoptopPageHalper().equalsList(48);
   }
 
-  @Test(enabled = true)
-  public void productSortingByPrice(){
+  @Test(enabled = false)
+  public void testProductSortingByPrice(){
     app.getMarketPageHelper().openMarketPage();
     app.getMarketPageHelper().moveToCategory();
     app.getLoptopPageHalper().clickToSortPrice("по цене");
@@ -24,12 +24,12 @@ public class MarketTests extends TestBase{
   }
 
   @Test(enabled = true)
-  public void compareGoodsTest(){
+  public void testCompareGoods(){
     app.getMarketPageHelper().openMarketPage();
     app.getMarketPageHelper().moveToCategory();
-    app.getLoptopPageHalper().addGoodsToCompare();
+    app.getLoptopPageHalper().addGoodsToCompare(4);
     app.getLoptopPageHalper().goToComparePage("Сравнение");
-    Assert.assertTrue(app.getCompareGoodsPageHelper().chekingGoodsCompare(2));
+    Assert.assertTrue(app.getCompareGoodsPageHelper().chekingGoodsCompare(4));
     app.getCompareGoodsPageHelper().deleteGoodsIncompare("Удалить список");
     Assert.assertTrue((app.getCompareGoodsPageHelper().chekingDeleteGoodsInCompare("Товаров нет.")));
   }

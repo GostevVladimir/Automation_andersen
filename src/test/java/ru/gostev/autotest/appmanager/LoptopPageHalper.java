@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import java.util.ArrayList;
@@ -16,10 +15,7 @@ public class LoptopPageHalper extends HelperBase{
     PageFactory.initElements(wd, this);
   }
 
-  @FindBy(css = "button[role=\"listbox\"]")
-  protected WebElement showBy;
-
-
+  private By showBy = By.cssSelector("button[role=\"listbox\"]");
   private By listShow = By.cssSelector(".select__text");
   private By listSort = By.cssSelector(".n-filter-sorter");
   private By price = By.cssSelector("div[class=\"price\"]");
@@ -28,13 +24,16 @@ public class LoptopPageHalper extends HelperBase{
   private By marketMenuElements = By.cssSelector(".header2-menu__text");
   private By goodsElements = By.cssSelector(".n-snippet-card2__title");
 
+  WebElement showByElement = wd.findElement(showBy);
+
   public void selectShowBy(String text){
-    moveTo(showBy);
-    clickToLink(showBy,wd, 5);
+    moveTo(showByElement);
+    clickToLink(showByElement,wd, 5);
     getElementList(text,getWebElements(listShow)).click();
   }
+
   public  void equalsList(int size){
-    wd.navigate().refresh();
+    waitForJQueryEnds();
     List<WebElement> elements = wd.findElements(goodsElements);
     Assert.assertEquals(elements.size(), size);
   }
@@ -44,9 +43,10 @@ public class LoptopPageHalper extends HelperBase{
   }
 
   public boolean comparePriceGoods(){
-    wd.navigate().refresh();
+    waitForJQueryEnds();
     return parseToListInteger(getACorrectPriceList(getWebElements(price)));
   }
+
   public boolean parseToListInteger(List<String> listString){
     for(int i = 0; i < listString.size()-1; i++){
       if(!(Integer.parseInt(listString.get(i)) <= Integer.parseInt(listString.get(i+1)))){
@@ -71,6 +71,7 @@ public class LoptopPageHalper extends HelperBase{
     str = str.replaceAll("от","");
     return str;
   }
+
   public boolean checkingTheSortIcon(String nameClass){
     List<WebElement> elementSort = getWebElements(filterLocator);
     moveTo(getElementList("по цене", elementSort));
@@ -81,14 +82,15 @@ public class LoptopPageHalper extends HelperBase{
       return true;
   }
 
-  public void addGoodsToCompare() {
+  public void addGoodsToCompare(int count) {
     Actions action = new Actions(wd);
     List<WebElement> elementsCompari = getWebElements(compareButtonsElements);
-    for(int i =0; i < 2; i++){
+    for(int i =0; i < count; i++){
       action.moveToElement(elementsCompari.get(i)).perform();
       elementsCompari.get(i).click();
     }
   }
+
   public  void goToComparePage(String textMenu){
     List<WebElement> elementsMenuMarket = getWebElements(marketMenuElements);
     Actions action = new Actions(wd);

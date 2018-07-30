@@ -23,6 +23,7 @@ public class CompareGoodsPageHelper extends HelperBase{
   private By compareMenuElements = By.cssSelector(".link__inner");
 
   public boolean chekingGoodsCompare(int count) {
+    waitForJQueryEnds();
     List<WebElement> elementsGoodsCompare = getWebElements(compareGoodsElements);
     if (elementsGoodsCompare.size() == count){
       return true;
@@ -40,6 +41,7 @@ public class CompareGoodsPageHelper extends HelperBase{
     }
   }
   public boolean chekingDeleteGoodsInCompare(String text){
+    waitForJQueryEnds();
     if(textDelitionCompare.getText().contains(text)){
       return true;
     }else  return false;
