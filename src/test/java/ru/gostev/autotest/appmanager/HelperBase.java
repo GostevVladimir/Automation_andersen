@@ -59,8 +59,12 @@ public class HelperBase {
     locator.click();
   }
 
-  public void waitForJQueryEnds() {
-    while ((Boolean) ((JavascriptExecutor) wd).executeScript("return jQuery.active!=0")) {
-    }
+  public  void waitForJQuery() {
+    (new WebDriverWait(wd, 2000)).until(new ExpectedCondition<Boolean>() {
+      public Boolean apply(WebDriver driver) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        return (Boolean) js.executeScript("return jQuery.active == 0");
+      }
+    });
   }
 }

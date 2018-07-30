@@ -27,9 +27,9 @@ public class MarketTests extends TestBase{
   public void testCompareGoods(){
     app.getMarketPageHelper().openMarketPage();
     app.getMarketPageHelper().moveToCategory();
-    app.getLoptopPageHalper().addGoodsToCompare(4);
+    app.getLoptopPageHalper().addGoodsToCompare(3);
     app.getLoptopPageHalper().goToComparePage("Сравнение");
-    Assert.assertTrue(app.getCompareGoodsPageHelper().chekingGoodsCompare(4));
+    Assert.assertTrue(app.getCompareGoodsPageHelper().chekingGoodsCompare(3));
     app.getCompareGoodsPageHelper().deleteGoodsIncompare("Удалить список");
     Assert.assertTrue((app.getCompareGoodsPageHelper().chekingDeleteGoodsInCompare("Товаров нет.")));
   }

@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import java.util.ArrayList;
@@ -15,7 +16,8 @@ public class LoptopPageHalper extends HelperBase{
     PageFactory.initElements(wd, this);
   }
 
-  private By showBy = By.cssSelector("button[role=\"listbox\"]");
+  @FindBy(css = "button[role=\"listbox\"]")
+  protected WebElement showBy;
   private By listShow = By.cssSelector(".select__text");
   private By listSort = By.cssSelector(".n-filter-sorter");
   private By price = By.cssSelector("div[class=\"price\"]");
@@ -24,16 +26,16 @@ public class LoptopPageHalper extends HelperBase{
   private By marketMenuElements = By.cssSelector(".header2-menu__text");
   private By goodsElements = By.cssSelector(".n-snippet-card2__title");
 
-  WebElement showByElement = wd.findElement(showBy);
 
   public void selectShowBy(String text){
-    moveTo(showByElement);
-    clickToLink(showByElement,wd, 5);
+    moveTo(showBy);
+    clickToLink(showBy,wd, 5);
     getElementList(text,getWebElements(listShow)).click();
   }
 
   public  void equalsList(int size){
-    waitForJQueryEnds();
+    waitForJQuery();
+    waitForJQuery();
     List<WebElement> elements = wd.findElements(goodsElements);
     Assert.assertEquals(elements.size(), size);
   }
@@ -43,7 +45,8 @@ public class LoptopPageHalper extends HelperBase{
   }
 
   public boolean comparePriceGoods(){
-    waitForJQueryEnds();
+    waitForJQuery();
+    waitForJQuery();
     return parseToListInteger(getACorrectPriceList(getWebElements(price)));
   }
 
