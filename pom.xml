@@ -40,7 +40,7 @@
                     <systemProperties>
                         <property>
                             <name>allure.results.directory</name>
-                            <value>build/allure-results</value>
+                            <value>C:\Users\Anduser\.jenkins\workspace\gva\allure-results</value>
                         </property>
                     </systemProperties>
                 </configuration>
