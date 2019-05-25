@@ -1,7 +1,13 @@
 package ru.gostev.autotest.appmanager;
 
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.MalformedURLException;
+import java.net.URI;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
@@ -15,8 +21,16 @@ public class ApplicationManager {
   private CompareGoodsPageHelper compareGoodsPageHelper;
 
 
-  public void init() {
-    wd = new ChromeDriver();
+  public void init() throws MalformedURLException {
+    DesiredCapabilities capabilities = new DesiredCapabilities();
+    capabilities.setBrowserName("chrome");
+    capabilities.setVersion("");
+    capabilities.setCapability("enableVNC", true);
+    capabilities.setCapability("enableVideo", false);
+    capabilities.setPlatform(Platform.LINUX);
+//    wd = new RemoteWebDriver(URI.create("http://172.17.0.1:4444/wd/hub").toURL(), capabilities);
+    wd = new RemoteWebDriver(URI.create("http://172.17.0.1:4444/wd/hub").toURL(), capabilities);
+    //wd = new ChromeDriver();
     wd.manage().window().maximize();
     wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     yandexMainPageHelper = new YandexMainPageHelper(wd);
